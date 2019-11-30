@@ -34,7 +34,7 @@ The model generates conversations between the characters based on the first keyw
 ## Determining Hyperparameters
 1) **Sequence Length**: I chose a sequence length of 50 to give the network a context of approximately 10 script lines on average to consider during training. This was derived from the fact that the average number of words per line was 5.5. Mode of thought: The more context the network could learn from while maintaining efficient training, the better.
 
-2) **Epochs**: I started out with 10 epochs as a first trial run to make sure the network would train and increased it to 20 thereafter. With 20 epochs the training loss settled around 2.2 which passed the initial requirement of less than 3.5; however, it was clear that the network could go even lower so I increased the number of epochs to 30. At this point the loss further decrease but was starting to struggle to decrease consistently. Final training loss converged around 0.9.
+2) **Epochs**: I started out with 10 epochs as a first trial run to make sure the network would train and increased it to 20 thereafter. With 20 epochs the training loss settled around 2.2 which passed the initial requirement of less than 3.5; however, it was clear that the network could go even lower so I increased the number of epochs to 30. At this point the loss further decrease but was starting to struggle to decrease consistently. Final training loss converged around ~1.3452.
 
 3) **Batch Size**: Initially started with 256 as an arbitrary start point. Saw that the network was training efficiently but wanted to increase the number of batches being trained from per epoch so I cut this in half to 128. Network continued to train efficiently with no GPU memory issues encountered.
 
